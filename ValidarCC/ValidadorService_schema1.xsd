@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://control/" xmlns:tns="http://control/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="getCardID" type="tns:getCardID"/>
+
+  <xs:element name="getCardIDResponse" type="tns:getCardIDResponse"/>
+
+  <xs:element name="getCardName" type="tns:getCardName"/>
+
+  <xs:element name="getCardNameResponse" type="tns:getCardNameResponse"/>
+
+  <xs:element name="isNumber" type="tns:isNumber"/>
+
+  <xs:element name="isNumberResponse" type="tns:isNumberResponse"/>
+
+  <xs:element name="validCC" type="tns:validCC"/>
+
+  <xs:element name="validCCNumber" type="tns:validCCNumber"/>
+
+  <xs:element name="validCCNumberResponse" type="tns:validCCNumberResponse"/>
+
+  <xs:element name="validCCResponse" type="tns:validCCResponse"/>
+
+  <xs:complexType name="getCardID">
+    <xs:sequence>
+      <xs:element name="idcartao" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCardIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validCC">
+    <xs:sequence>
+      <xs:element name="numero" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validCCResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isNumber">
+    <xs:sequence>
+      <xs:element name="n" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isNumberResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCardName">
+    <xs:sequence>
+      <xs:element name="bandeira" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCardNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validCCNumber">
+    <xs:sequence>
+      <xs:element name="validacao" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="validCCNumberResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
